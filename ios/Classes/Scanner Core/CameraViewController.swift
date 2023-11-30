@@ -147,7 +147,7 @@ class CameraViewController: UIViewController {
     func refocus() {
         do {
             try device.lockForConfiguration()
-            device.focusMode = .autoFocus
+            try device.focusMode = .autoFocus
         } catch {
             print(error)
         }
