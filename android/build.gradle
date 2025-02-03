@@ -27,8 +27,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion 34
+    namespace 'com.nateshmbhat.card_scanner'
     defaultConfig {
         minSdkVersion 21
     }
@@ -37,12 +37,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11  // Use Java 11
+        targetCompatibility = JavaVersion.VERSION_11  // Use Java 11
     }
 
+    // Update Kotlin JVM target to 11 or 17 (recommended)
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
