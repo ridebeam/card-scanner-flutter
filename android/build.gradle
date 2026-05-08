@@ -3,7 +3,7 @@ version '1.0'
 
 buildscript {
     ext {
-        kotlin_version = "1.5.20"
+        kotlin_version = "1.9.24"
     }
     repositories {
         google()
@@ -11,7 +11,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:8.3.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -37,13 +37,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11  // Use Java 11
-        targetCompatibility = JavaVersion.VERSION_11  // Use Java 11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    // Update Kotlin JVM target to 11 or 17 (recommended)
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
 }
 
